@@ -20,7 +20,7 @@ Copying boot params.....DONE
 
 Arcadyan bootloader version 0.07 boot_version 0.07
 Press space bar to cancel startup...
-Device eth0:  hwaddr 08-86-3B-FC-A3-24, ipaddr 192.168.2.1, mask 255.255.255.0
+Device eth0:  hwaddr xx-xx-xx-xx-xx-xx, ipaddr 192.168.2.1, mask 255.255.255.0
         gateway not set, nameserver not set
 Loader:raw Filesys:raw Dev:flash0.os File: Options:(null)
 Loading: [ZIP 3] [ZIP 1]  done 0 bytes read
@@ -28,276 +28,543 @@ Entry at 0x80002000
 Closing network.
 Starting program at 0x80002000
 
-In c_entry() function ...
-CPU ProcId is: 0x00019749, options: 0x000021cd
-sii->pub.ccrev=39
-si_pmu_res_init: pmu_res_updown_table_sz=0, pmu_res_updown_table=0
-si_mips_init: sih->ccrev=0x27
-CPU: BCMd144 rev 1 at 300 MHz
-install_exception 
-Set C0 SR to 0x10000000
-Co config = 80240483
-sys_irq_init ...
-Before entering coretest_main
-##### _ftext      = 0x80002000
-##### _fdata      = 0x801FC690
-##### __bss_start = 0x802549F4
-##### end         = 0x806C8EA8
-init_memory_after_end:40 0x807A7C90 
-##### TFTP buffer from 0x806D0EA8~0x807E66A8 length 1136640
-##### Backup Data from 0x807A7C9C to 0x807A7C9C~0x80800000 len 361316
-[INIT] System Log Pool startup ...
-[INIT] MTinitialize ..
-[INIT] usrclk
-CPU Clock 300000000 Hz
-mips_counter_frequency:150000000
-r4k_offset: 0x000249f0(150000)
-init_US_counter : time1 = 237641 , time2 = 40237732, diff 40000091
-US_counter = 52
- cnt1 41086319 cnt2 41087747, diff 1428
-r4k_cur:0x027d7971(-2140336652)
-End of usrclk_init
-mips_int_enable: 5
-mips_int_enable 1: s = 8000
-mips_int_enable 2: s = 8000
-mips_int_enable 3: s = 0
-Runtime code version: 4.00.07
-System startup...
-[INIT] Memory COLOR 0, 730000 bytes ..
-[INIT] Memory COLOR 1, 420000 bytes ..
-[INIT] Memory COLOR 2, 321200 bytes ..
-PCI: no core
-PCI: no core
-si_corevendor:socitype=1, 1
-si_corevendor:socitype=1, 1
-si_corevendor:socitype=1, 1
-si_corevendor:socitype=1, 1
-si_corevendor:socitype=1, 1
-[pci_alloc_bus] alloc memory 803dfeec
-[pci_do_scan_bus]Scanning bus 00
-Found bus:devfn[vid/did]class header_type 00:00 [14e4/0800] 000501 00
-[pci_fixup_device]: vendor= 0x14e4 dev=0x800 devfn= 0x0
-PCI: Calling quirk 801696E4 for 00:00.0
-Found bus:devfn[vid/did]class header_type 00:08 [14e4/4347] 000280 00
-[pci_fixup_device]: vendor= 0x14e4 dev=0x4347 devfn= 0x8
-PCI: Calling quirk 801696E4 for 00:01.0
-Found bus:devfn[vid/did]class header_type 00:10 [14e4/4715] 000200 00
-[pci_fixup_device]: vendor= 0x14e4 dev=0x4715 devfn= 0x10
-PCI: Calling quirk 801696E4 for 00:02.0
-Found bus:devfn[vid/did]class header_type 00:20 [14e4/0835] 00ffff 00
-[pci_fixup_device]: vendor= 0x14e4 dev=0x835 devfn= 0x20
-PCI: Calling quirk 801696E4 for 00:04.0
-Fixups for bus 00
-PCI: Fixing up bus 0
-Bus scan for 00 returning with max=00
-[pci_fixup_device]: vendor= 0x14e4 dev=0x800 devfn= 0x0
-[pci_fixup_device]: vendor= 0x14e4 dev=0x4347 devfn= 0x8
-[pci_fixup_device]: vendor= 0x14e4 dev=0x4715 devfn= 0x10
-[pci_fixup_device]: vendor= 0x14e4 dev=0x835 devfn= 0x20
-RUNTASK id=1 iNetTask ...
-Found an ST compatible serial flash with 32 64KB blocks; total size 2MB
-Set flash memory layout to PA_VALUE fee4fe641ce81736fa0afa39
-PROJ_WPSPIN:77304384, PROJ_PINLen:8, PROJ_BOOT_WPSPIN:2
-PIN:77304384,, accum:1
-Boot Parameters found !!!
-Bootcode version: 0.07
-Serial number: 121217GB444599
-Hardware version: 01
+
+In c_entry() function ...
+
+CPU ProcId is: 0x00019749, options: 0x000021cd
+
+sii->pub.ccrev=39
+
+si_pmu_res_init: pmu_res_updown_table_sz=0, pmu_res_updown_table=0
+
+si_mips_init: sih->ccrev=0x27
+
+CPU: BCMd144 rev 1 at 300 MHz
+
+install_exception 
+
+Set C0 SR to 0x10000000
+
+Co config = 80240483
+
+sys_irq_init ...
+
+Before entering coretest_main
+
+##### _ftext      = 0x80002000
+
+##### _fdata      = 0x801FC690
+
+##### __bss_start = 0x802549F4
+
+##### end         = 0x806C8EA8
+
+init_memory_after_end:40 0x807A7C90 
+
+##### TFTP buffer from 0x806D0EA8~0x807E66A8 length 1136640
+
+##### Backup Data from 0x807A7C9C to 0x807A7C9C~0x80800000 len 361316
+
+[INIT] System Log Pool startup ...
+
+[INIT] MTinitialize ..
+
+[INIT] usrclk
+
+CPU Clock 300000000 Hz
+
+mips_counter_frequency:150000000
+
+r4k_offset: 0x000249f0(150000)
+
+init_US_counter : time1 = 237641 , time2 = 40237732, diff 40000091
+
+US_counter = 52
+
+ cnt1 41086319 cnt2 41087747, diff 1428
+
+r4k_cur:0x027d7971(-2140336652)
+
+End of usrclk_init
+
+mips_int_enable: 5
+
+mips_int_enable 1: s = 8000
+
+mips_int_enable 2: s = 8000
+
+mips_int_enable 3: s = 0
+
+Runtime code version: 4.00.07
+
+System startup...
+
+[INIT] Memory COLOR 0, 730000 bytes ..
+
+[INIT] Memory COLOR 1, 420000 bytes ..
+
+[INIT] Memory COLOR 2, 321200 bytes ..
+
+PCI: no core
+
+PCI: no core
+
+si_corevendor:socitype=1, 1
+
+si_corevendor:socitype=1, 1
+
+si_corevendor:socitype=1, 1
+
+si_corevendor:socitype=1, 1
+
+si_corevendor:socitype=1, 1
+
+[pci_alloc_bus] alloc memory 803dfeec
+
+[pci_do_scan_bus]Scanning bus 00
+
+Found bus:devfn[vid/did]class header_type 00:00 [14e4/0800] 000501 00
+
+[pci_fixup_device]: vendor= 0x14e4 dev=0x800 devfn= 0x0
+
+PCI: Calling quirk 801696E4 for 00:00.0
+
+Found bus:devfn[vid/did]class header_type 00:08 [14e4/4347] 000280 00
+
+[pci_fixup_device]: vendor= 0x14e4 dev=0x4347 devfn= 0x8
+
+PCI: Calling quirk 801696E4 for 00:01.0
+
+Found bus:devfn[vid/did]class header_type 00:10 [14e4/4715] 000200 00
+
+[pci_fixup_device]: vendor= 0x14e4 dev=0x4715 devfn= 0x10
+
+PCI: Calling quirk 801696E4 for 00:02.0
+
+Found bus:devfn[vid/did]class header_type 00:20 [14e4/0835] 00ffff 00
+
+[pci_fixup_device]: vendor= 0x14e4 dev=0x835 devfn= 0x20
+
+PCI: Calling quirk 801696E4 for 00:04.0
+
+Fixups for bus 00
+
+PCI: Fixing up bus 0
+
+Bus scan for 00 returning with max=00
+
+[pci_fixup_device]: vendor= 0x14e4 dev=0x800 devfn= 0x0
+
+[pci_fixup_device]: vendor= 0x14e4 dev=0x4347 devfn= 0x8
+
+[pci_fixup_device]: vendor= 0x14e4 dev=0x4715 devfn= 0x10
+
+[pci_fixup_device]: vendor= 0x14e4 dev=0x835 devfn= 0x20
+
+RUNTASK id=1 iNetTask ...
+
+Found an ST compatible serial flash with 32 64KB blocks; total size 2MB
+
+Set flash memory layout to PA_VALUE fee4fe641ce81736fa0afa39
+
+PROJ_WPSPIN:77304384, PROJ_PINLen:8, PROJ_BOOT_WPSPIN:2
+
+PIN:77304384,, accum:1
+
+Boot Parameters found !!!
+
+Bootcode version: 0.07
+
+Serial number: 121217GB444599
+
+Hardware version: 01
 
 
-sizeof(struct III_Config_t) is 53224, nLen:53224, Magic:0x33343536
 
-my CFGVersionMagic = 33343536, old CFGVersionMagic on flash = 33343536
-my CFGsize = 53248, my CFGDescSize = 17722
-my Version = 4.00.07, Version on flash= 4.00.07
-[CONFIG] flash version:[4.00.07], [4.0.0-7]
-[CONFIG] code version:[4.00.07], [4.0.0-7]
-CFGsize on flash = 53248, CFGDescSize on flash = 17722
-OldCfgHexSize:6129
-Tail1 : END_III_Config_t
+sizeof(struct III_Config_t) is 53224, nLen:53224, Magic:0x33343536
 
-Size of Old CFG_DESC is :17720!!!
-useCfgDesc:1
-MyCfgHexSize:6129
-My CFGDescSize:17722
-useCfgDesc:1
-Tail : END_III_Config_t
 
-useCfgDesc:3
+my CFGVersionMagic = 33343536, old CFGVersionMagic on flash = 33343536
 
-Restore Config file from ver:4.00.07!!!
+my CFGsize = 53248, my CFGDescSize = 17722
 
-[CONFIG] Configuration in Flash is old version: 4.0.7
-[CONFIG] DS_Tail:[t_F9K1001v4]
-default route: 0.0.0.0
-BufferInit:
-BUF_HDR_SZ=160 BUF_ALIGN_SZ=16 BUFFER_OFFSET=384
-BUF_BUFSZ0=608 BUF_BUFSZ1=2272
-NUM_OF_B0=0 NUM_OF_B1=780
-BUF_POOL0_SZ=0 BUF_POOL1_SZ=1896960
-sizeof(BUFFER0)=768,sizeof(BUFFER1)=2432
-*BUF0=0x80605a44 *BUF1=0x80436824
-Altgn *BUF0=0x80605a60 *BUF1=0x80436840
-End at BUF0:0x80605a60, BUF1:0x80605a40
+my Version = 4.00.07, Version on flash= 4.00.07
 
-buffer0 pointer init OK!
-buffer1 pointer init OK!
-ifno=  0, Link_Type= 4
-time = 08/01/2003, 00:00:00
-Interface 0 ip = 127.0.0.1
+[CONFIG] flash version:[4.00.07], [4.0.0-7]
 
-ifno=  1, Link_Type= 1
-[pci_set_master]
-PCI: Enabling bus mastering for device 00:02.0
-PCI: Setting latency timer of device 00:02.0 to 64
-[pci_enable_device]
-[pci_set_power_state] dev->device=0x4715 state=0
-sii->pub.ccrev=39
-si_pmu_res_init: pmu_res_updown_table_sz=0, pmu_res_updown_table=0
-ETC: chip=d144, chiprev=1, coreid=82d, corerev=3, boardflags=710, boardtype=54d, 
-NonCache malloc size=2048
-[cacheBcm47xxFree] NOT IMPLEMENTED
-NonCache malloc size=2048
-NonCache malloc size=8192
-[cacheBcm47xxFree] NOT IMPLEMENTED
-NonCache malloc size=8192
-NonCache malloc size=2048
-NonCache malloc size=2048
-NonCache malloc size=2048
-[cacheBcm47xxFree] NOT IMPLEMENTED
-NonCache malloc size=2048
-mips_int_enable: 2
-mips_int_enable 1: s = 8000
-mips_int_enable 2: s = 9000
-mips_int_enable 3: s = 0
-: Broadcom BCM47XX 10/100/1000 Mbps Ethernet Controller 5.100.138.4
-MAC Address: 08:86:3b:fc:a3:24
-time = 08/01/2003, 00:00:00
-Interface 1 ip = 192.168.2.1
+[CONFIG] code version:[4.00.07], [4.0.0-7]
 
-ifno=  2, Link_Type= 1
-hwlan_init(239): [HWLAN] ifno=2 irno=7 port=0x00000000
-[hwlan_init] if_table[2]::08-c0-a8-02-01-02
-[hwlan_init] if_table[2]::08-86-a8-02-01-02
-[hwlan_init] if_table[2]::08-86-3b-02-01-02
-[hwlan_init] if_table[2]::08-86-3b-fc-01-02
-[hwlan_init] if_table[2]::08-86-3b-fc-a3-02
-[hwlan_init] if_table[2]::08-86-3b-fc-a3-24
-[pci_enable_device]
-[pci_set_power_state] dev->device=0x4347 state=0
-[pci_set_master]
-PCI: Enabling bus mastering for device 00:01.0
-PCI: Setting latency timer of device 00:01.0 to 64
-RUNTASK id=2 rapi_tmr_task ...
-sii->pub.ccrev=39
-si_pmu_res_init: pmu_res_updown_table_sz=0, pmu_res_updown_table=0
-wlc_bmac_attach: bustype=1
-wlc_chipmatch: device=4347
- maxp2ga1 5a 
- pa2gw0a0 fffffee4
- pa2gw0a1 fffffe64
- pa2gw1a0 1ce8
- pa2gw1a1 1736
- pa2gw2a0 fffffa0a
- pa2gw2a1 fffffa39
-NonCache malloc size=1024
-NonCache malloc size=1024
-NonCache malloc size=1024
-NonCache malloc size=1024
-NonCache malloc size=1024
-NonCache malloc size=1024
-[cacheBcm47xxFree] NOT IMPLEMENTED
-NonCache malloc size=1024
-NonCache malloc size=1024
-wlc->pub->psq_pkts_total:285:50:125:32:5
-wlc_country_lookup: ccode 0 SPROM 0:0 
-failed lookup
-wlc_country_lookup: ccode US SPROM 0:0 
-: mapped to US 0
-wlc_channel_mgr_attach:country_abbrev=US
-wlc_set_countrycode: ccode=US
-wlc_set_country_common: country->mimo2g=1, 2g=0
-mips_int_enable: 1
-mips_int_enable 1: s = 9000
-mips_int_enable 2: s = 9800
-mips_int_enable 3: s = 0
-[bustype=1]: Broadcom BCM4347 802.11 Wireless Controller 5.100.138.4
-time = 08/01/2003, 00:00:00
-Interface 2 ip = 192.168.2.1
+CFGsize on flash = 53248, CFGDescSize on flash = 17722
 
-ifno=  3, Link_Type= 1
-MAC Address: 08:86:3b:fc:a3:25
-time = 08/01/2003, 00:00:00
-iput_IpLinkUp(ifno=3)> ifp->add_default_route:1
-Interface 3 ip = 0.0.0.0
+OldCfgHexSize:6129
 
-ifno=  4, Link_Type= 0
-ifno=  5, Link_Type= 0
-ifno=  6, Link_Type= 0
-ifno=  7, Link_Type= 0
-RUNTASK id=4 if_task if0...
-RUNTASK id=5 if_task if1...
-RUNTASK id=6 if_task if2...
-RUNTASK id=7 if_task if3...
-RUNTASK id=8 timer_task...
-RUNTASK id=9 conn_mgr...
-RUNTASK id=10 main_8021x...
-RUNTASK id=11 main_lltd...
-RUNTASK id=12 ledsys_timer_callback...
-RUNTASK id=13 period_task...
-RUNTASK id=14 InternetCheckTask...
-RUNTASK id=15 dhcp_daemon...
-RUNTASK id=16 dhcp_clt...on interface 3
----[ [0] HASH head start 0xBFC50000 ]---
-found signature: 78h 56h 34h 12h
-length checking OK
-[0] find End at 0xBFCF5C00 len=679575
-found signature: 78h 56h 34h 12h
-length checking OK
-[1] find End at 0xBFD67800 len=465812
-Image[1] at 0xBFC50000, len = 679575
-Image[2] at 0xBFCF6000, len = 465812
-httpd: listen at 192.168.2.1:80
-RUNTASK httpd...
-RUNTASK id=19 dnsproxy...
-RUNTASK id=20 rip...
-RUNTASK id=21 ripout...
-RUNTASK id=22 dhcpd_mgmt_task...
-UPnP is enabled
-UPNP Device initialize success! slot=23
+Tail1 : END_III_Config_t
 
->>> belkin_wan_cfg task runs successfully, task_id = 24
-RUNTASK id=25 wscinit...
-RUNTASK id=26 WscSendEapPacket...
-RUNTASK id=27 wsc_Send_UPNP_packet...
-Starting Multitask...
-allocate_memory_after_end:50 0x8078A490 
-language buf 8078A490, , >>>>>>>>
-get_language /www/doc/English.cpz, size=105221, >>>>>>>>
-RUNTASK id=28 apAppInit...
-wsc_initialized:1
-GE(pi->pubpi.phy_rev, LCNXN_BASEREV)
-[wl_open] done
-wlc_set_countrycode: ccode=ALL
-wlc_set_country_common: country->mimo2g=21, 2g=15
-wlconf: rev.chipnum=d144
-*********BeaconBuf.len == 0*******
-*********BeaconBuf.len == 0*******
-[HWLAN] Ready
-[dhcp_clt] enable dhcp client in interface WAN[3]
-*********************************************
-****Wi-Fi Simple Config Application***** 
-Version: Build 3.00.1.DTM1.1, Dec 19 2012 13:47:34
-*********************************************
-wsc_initialized:2
--------UPnP_WSC_Init------
-wlc_set_countrycode: ccode=ALL
-wlc_set_country_common: country->mimo2g=21, 2g=15
-wlconf: rev.chipnum=d144
-COEX: downgraded chanspec 0x2d05 to 0x2b03: channel 1 used by exiting BSSs 
-Set_CountryCode_Proc: US 
-wlc_set_countrycode: ccode=US
-wlc_set_country_common: country->mimo2g=1, 2g=0
-cmd [txant] error -2
-NULL: Not In Range
-time:  0 d  0: 0: 8 , Buf[1].count= 404
+
+Size of Old CFG_DESC is :17720!!!
+
+useCfgDesc:1
+
+MyCfgHexSize:6129
+
+My CFGDescSize:17722
+
+useCfgDesc:1
+
+Tail : END_III_Config_t
+
+
+useCfgDesc:3
+
+
+Restore Config file from ver:4.00.07!!!
+
+
+[CONFIG] Configuration in Flash is old version: 4.0.7
+
+[CONFIG] DS_Tail:[t_F9K1001v4]
+
+default route: 0.0.0.0
+
+BufferInit:
+
+BUF_HDR_SZ=160 BUF_ALIGN_SZ=16 BUFFER_OFFSET=384
+
+BUF_BUFSZ0=608 BUF_BUFSZ1=2272
+
+NUM_OF_B0=0 NUM_OF_B1=780
+
+BUF_POOL0_SZ=0 BUF_POOL1_SZ=1896960
+
+sizeof(BUFFER0)=768,sizeof(BUFFER1)=2432
+
+*BUF0=0x80605a44 *BUF1=0x80436824
+
+Altgn *BUF0=0x80605a60 *BUF1=0x80436840
+
+End at BUF0:0x80605a60, BUF1:0x80605a40
+
+
+buffer0 pointer init OK!
+
+buffer1 pointer init OK!
+
+ifno=  0, Link_Type= 4
+
+time = 08/01/2003, 00:00:00
+
+Interface 0 ip = 127.0.0.1
+
+
+ifno=  1, Link_Type= 1
+
+[pci_set_master]
+
+PCI: Enabling bus mastering for device 00:02.0
+
+PCI: Setting latency timer of device 00:02.0 to 64
+
+[pci_enable_device]
+
+[pci_set_power_state] dev->device=0x4715 state=0
+
+sii->pub.ccrev=39
+
+si_pmu_res_init: pmu_res_updown_table_sz=0, pmu_res_updown_table=0
+
+ETC: chip=d144, chiprev=1, coreid=82d, corerev=3, boardflags=710, boardtype=54d, 
+
+NonCache malloc size=2048
+
+[cacheBcm47xxFree] NOT IMPLEMENTED
+
+NonCache malloc size=2048
+
+NonCache malloc size=8192
+
+[cacheBcm47xxFree] NOT IMPLEMENTED
+
+NonCache malloc size=8192
+
+NonCache malloc size=2048
+
+NonCache malloc size=2048
+
+NonCache malloc size=2048
+
+[cacheBcm47xxFree] NOT IMPLEMENTED
+
+NonCache malloc size=2048
+
+mips_int_enable: 2
+
+mips_int_enable 1: s = 8000
+
+mips_int_enable 2: s = 9000
+
+mips_int_enable 3: s = 0
+
+: Broadcom BCM47XX 10/100/1000 Mbps Ethernet Controller 5.100.138.4
+
+MAC Address: 08:86:3b:fc:a3:24
+
+time = 08/01/2003, 00:00:00
+
+Interface 1 ip = 192.168.2.1
+
+
+ifno=  2, Link_Type= 1
+
+hwlan_init(239): [HWLAN] ifno=2 irno=7 port=0x00000000
+
+[hwlan_init] if_table[2]::08-c0-a8-02-01-02
+
+[hwlan_init] if_table[2]::08-86-a8-02-01-02
+
+[hwlan_init] if_table[2]::08-86-3b-02-01-02
+
+[hwlan_init] if_table[2]::08-86-3b-fc-01-02
+
+[hwlan_init] if_table[2]::08-86-3b-fc-a3-02
+
+[hwlan_init] if_table[2]::08-86-3b-fc-a3-24
+
+[pci_enable_device]
+
+[pci_set_power_state] dev->device=0x4347 state=0
+
+[pci_set_master]
+
+PCI: Enabling bus mastering for device 00:01.0
+
+PCI: Setting latency timer of device 00:01.0 to 64
+
+RUNTASK id=2 rapi_tmr_task ...
+
+sii->pub.ccrev=39
+
+si_pmu_res_init: pmu_res_updown_table_sz=0, pmu_res_updown_table=0
+
+wlc_bmac_attach: bustype=1
+
+wlc_chipmatch: device=4347
+
+ maxp2ga1 5a 
+
+
+ pa2gw0a0 fffffee4
+
+
+ pa2gw0a1 fffffe64
+
+
+ pa2gw1a0 1ce8
+
+
+ pa2gw1a1 1736
+
+
+ pa2gw2a0 fffffa0a
+
+
+ pa2gw2a1 fffffa39
+
+
+NonCache malloc size=1024
+
+NonCache malloc size=1024
+
+NonCache malloc size=1024
+
+NonCache malloc size=1024
+
+NonCache malloc size=1024
+
+NonCache malloc size=1024
+
+[cacheBcm47xxFree] NOT IMPLEMENTED
+
+NonCache malloc size=1024
+
+NonCache malloc size=1024
+
+wlc->pub->psq_pkts_total:285:50:125:32:5
+
+wlc_country_lookup: ccode 0 SPROM 0:0 
+
+failed lookup
+
+wlc_country_lookup: ccode US SPROM 0:0 
+
+: mapped to US 0
+
+wlc_channel_mgr_attach:country_abbrev=US
+
+wlc_set_countrycode: ccode=US
+
+wlc_set_country_common: country->mimo2g=1, 2g=0
+
+mips_int_enable: 1
+
+mips_int_enable 1: s = 9000
+
+mips_int_enable 2: s = 9800
+
+mips_int_enable 3: s = 0
+
+[bustype=1]: Broadcom BCM4347 802.11 Wireless Controller 5.100.138.4
+
+time = 08/01/2003, 00:00:00
+
+Interface 2 ip = 192.168.2.1
+
+
+ifno=  3, Link_Type= 1
+
+MAC Address: 08:86:3b:fc:a3:25
+
+time = 08/01/2003, 00:00:00
+
+iput_IpLinkUp(ifno=3)> ifp->add_default_route:1
+
+Interface 3 ip = 0.0.0.0
+
+
+ifno=  4, Link_Type= 0
+
+ifno=  5, Link_Type= 0
+
+ifno=  6, Link_Type= 0
+
+ifno=  7, Link_Type= 0
+
+RUNTASK id=4 if_task if0...
+
+RUNTASK id=5 if_task if1...
+
+RUNTASK id=6 if_task if2...
+
+RUNTASK id=7 if_task if3...
+
+RUNTASK id=8 timer_task...
+
+RUNTASK id=9 conn_mgr...
+
+RUNTASK id=10 main_8021x...
+
+RUNTASK id=11 main_lltd...
+
+RUNTASK id=12 ledsys_timer_callback...
+
+RUNTASK id=13 period_task...
+
+RUNTASK id=14 InternetCheckTask...
+
+RUNTASK id=15 dhcp_daemon...
+
+RUNTASK id=16 dhcp_clt...on interface 3
+
+---[ [0] HASH head start 0xBFC50000 ]---
+
+found signature: 78h 56h 34h 12h
+
+length checking OK
+
+[0] find End at 0xBFCF5C00 len=679575
+
+found signature: 78h 56h 34h 12h
+
+length checking OK
+
+[1] find End at 0xBFD67800 len=465812
+
+Image[1] at 0xBFC50000, len = 679575
+
+Image[2] at 0xBFCF6000, len = 465812
+
+httpd: listen at 192.168.2.1:80
+
+RUNTASK httpd...
+
+RUNTASK id=19 dnsproxy...
+
+RUNTASK id=20 rip...
+
+RUNTASK id=21 ripout...
+
+RUNTASK id=22 dhcpd_mgmt_task...
+
+UPnP is enabled
+
+UPNP Device initialize success! slot=23
+
+
+>>> belkin_wan_cfg task runs successfully, task_id = 24
+
+RUNTASK id=25 wscinit...
+
+RUNTASK id=26 WscSendEapPacket...
+
+RUNTASK id=27 wsc_Send_UPNP_packet...
+
+Starting Multitask...
+
+allocate_memory_after_end:50 0x8078A490 
+
+language buf 8078A490, , >>>>>>>>
+
+get_language /www/doc/English.cpz, size=105221, >>>>>>>>
+
+RUNTASK id=28 apAppInit...
+
+wsc_initialized:1
+
+GE(pi->pubpi.phy_rev, LCNXN_BASEREV)
+
+[wl_open] done
+
+wlc_set_countrycode: ccode=ALL
+
+wlc_set_country_common: country->mimo2g=21, 2g=15
+
+wlconf: rev.chipnum=d144
+
+*********BeaconBuf.len == 0*******
+
+*********BeaconBuf.len == 0*******
+
+[HWLAN] Ready
+
+[dhcp_clt] enable dhcp client in interface WAN[3]
+
+*********************************************
+
+****Wi-Fi Simple Config Application***** 
+
+Version: Build 3.00.1.DTM1.1, Dec 19 2012 13:47:34
+
+*********************************************
+
+wsc_initialized:2
+
+-------UPnP_WSC_Init------
+
+wlc_set_countrycode: ccode=ALL
+
+wlc_set_country_common: country->mimo2g=21, 2g=15
+
+wlconf: rev.chipnum=d144
+
+COEX: downgraded chanspec 0x2d05 to 0x2b03: channel 1 used by exiting BSSs 
+
+Set_CountryCode_Proc: US 
+
+wlc_set_countrycode: ccode=US
+
+wlc_set_country_common: country->mimo2g=1, 2g=0
+
+cmd [txant] error -2
+
+NULL: Not In Range
+
+time:  0 d  0: 0: 8 , Buf[1].count= 404
