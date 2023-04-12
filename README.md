@@ -6,7 +6,10 @@ Reverse engineering a Belkin N150 Wireless Router model F9K1001V4
 2. Near the Broadcome MCU, you'll find 4 test points at J3 (TP106) - [See image](https://github.com/joeyda3rd/Hacking-Belkin-N150/blob/a3123a9b957c4d2f79572712a6794ddaf572a476/images/20230410_134249.jpg)
 3. Using a multimeter, check voltages and resistance against GND and VCC to determine pinout, see chart below.
 5. solder a 4 (or 3) pin connector strip through the holes or onto the pads. - [see image](https://github.com/joeyda3rd/Hacking-Belkin-N150/blob/a3123a9b957c4d2f79572712a6794ddaf572a476/images/20230411_114347.jpg)
-6. Connect UART serial port adapter (FTDI FT232RL) at 3.3V. GND to GND, cross Tx to Rx and Rx to Tx, 4th pin unused
+6. Connect a serial port adapter (FTDI FT232RL) at 3.3V. GND to GND, cross Tx to Rx and Rx to Tx, 4th pin unused.
+7. Start a terminal emulator (PuTTY) on the appropriate serial port of your PC at 115,200 baud rate. Enable logging printable output.
+8. Boot the device, allow the bootup log to finish to retrieve information about the device. [See log](https://github.com/joeyda3rd/Hacking-Belkin-N150/blob/a3123a9b957c4d2f79572712a6794ddaf572a476/bootup.log)
+9. Power device off and on and press space key when you see `Press space bar to cancel startup...` to access shell prompt.
 
 # Test Point Multimeter Chart
 with ethernet ports on the left, point 1 is on the left and 4 is on the far right
